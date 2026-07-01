@@ -1,34 +1,92 @@
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
         'h n n'
         'as f ar'
     ;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+    width: 95%;
 }
-
+article, aside, header, footer{
+    text-align: right;
+}
 header {
     grid-area: h;
+    background-image: url(dandelion.jpg);
 }
 
 nav {
     grid-area: n;
+    background-image: url(dand2.jpg);  
+    
 }
 
 aside {
     grid-area: as;
+    background-image: url(dand3.jpg);
+    
+    
 }
 
 footer {
     grid-area: f;
+    background-image: url(dandy.gif);
+    
 }
 
 article {
     grid-area: ar;
+    background-image: url(dandy2.gif);
+    
 }
 
 * {
     box-sizing: border-box;
+    /*kereten belüli távolság*/
     padding: 0px;
+    /*kereten kívüli távolság*/
     margin: 0px;
+    border-radius: 5px;
+    color: white;
+
+}
+li{
+    list-style-position: inside;
+}
+main>*{
+
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    opacity: 0.4;
+}
+
+
+main>*:hover{
+    opacity: 1;
+}
+
+a{
+    display: inline;
+    text-decoration: none;
+    padding-right: 15px;
+}
+
+li{
+    list-style-type: none;
+}
+
+ol li{
+    display: inline;
+}
+ol{
+    background-color: rgba(42, 47, 72, 0.7);
+    height: 35px;
+    padding: 9px;
 }
